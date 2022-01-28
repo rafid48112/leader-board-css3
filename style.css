@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   background-color: #e5e5e5;
@@ -46,7 +46,9 @@ nav {
 .ar-head {
   color: #562eff;
   padding: 1.5rem;
+  font-size: 1.5rem;
 }
+
 .top-players {
   width: 90%;
   margin: 0 auto;
@@ -61,6 +63,7 @@ nav {
 }
 .player-name {
   margin-left: 0.5rem;
+  font-size: 1.125rem;
 }
 .main-div,
 .course-div {
@@ -70,8 +73,6 @@ nav {
 .top-blogs,
 .latest-course {
   padding: 1.5rem;
-}
-.top-blogs {
 }
 .blog {
   margin-bottom: 1rem;
@@ -83,11 +84,20 @@ nav {
 .blog-des {
   margin-left: 1rem;
 }
+.low-op {
+  color: grey;
+  opacity: 0.6;
+  font-size: 1rem;
+}
 .blog-des a {
   color: black;
 }
 .blogger {
   color: #562eff;
+}
+.low-op,
+.blogger {
+  font-size: 1rem;
 }
 .blog-image {
   width: 150px;
@@ -97,25 +107,91 @@ nav {
   height: 120px;
 }
 .sm-icon {
-  width: 1rem;
+  width: 0.8rem;
 }
 .course {
-  margin: 1rem 2rem;
+  margin: 1rem auto;
   padding: 1rem;
+  width: 70%;
   text-align: center;
   border-radius: 1rem;
   box-shadow: 2px 2px 10px grey;
   transition: transform 0.5s;
 }
+.lat-head {
+  text-align: center;
+}
 .course:hover {
   transform: translateY(-5px);
 }
+.course-head {
+  font-size: 1.25rem;
+}
 .course-foot {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   color: #ff4a60;
+  width: 80%;
+}
+.rating,
+.course-time {
+  font-size: 0.9rem;
 }
 .course-time {
   background-color: #ff4a5f4b;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-mentor {
+  color: #ff4a60;
+}
+@media (min-width: 676px) {
+  .container {
+    margin: auto;
+    width: 80%;
+  }
+  .main-div {
+    margin: 2rem auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    margin: auto;
+    width: 70%;
+  }
+  .main-div {
+    margin: 2rem auto;
+  }
+  .top-players {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .top-blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .latest-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .lat-head {
+    text-align: left;
+  }
+  .course {
+    width: 90%;
+  }
+  .course-image {
+    width: 80%;
+  }
+  .course-foot {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .latest-courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
